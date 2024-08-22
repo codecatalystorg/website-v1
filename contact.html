@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeCatalyst - Contact</title>
+        <link rel="icon" href="images/favicon2.png">
+        <link rel="stylesheet" href="style/styles.css">
+        <script src="js/contact.js"></script>
+    </head>
+
+    <style>
+        .contact{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            min-height: 400px;
+            padding: 100px 20vw;
+        }
+
+        .questions{
+            background-color: lemonchiffon;
+            align-items:center;
+            text-align: center;
+        }
+
+        h2{
+            text-align: center;
+            padding: 20px;
+        }
+
+        input{
+            background-color: white;
+            width: 70%;
+            font-size: 20px;
+            padding: 16px 16px;
+            border-color: black;
+            margin-bottom: 20px;
+        }
+
+        textarea{
+            background-color: white;
+            width: 70%;
+            font-size: 20px;
+            padding: 16px 16px;
+            border-color: black;
+            margin-bottom: 25px;
+        }
+
+        input:focus-within{
+            outline: none;
+            border-color: blue;
+            border-width: 3px;
+        }        
+        
+        textarea:focus-within{
+            outline: none;
+            border-color: blue;
+            border-width: 3px;
+        }
+
+        button{
+            background-color: white;
+            border-color: black;
+            font-size: 22px;
+            padding: 10px 18px;
+            text-align: center;
+            margin: auto;
+            display: flex;
+        }
+
+        button:hover{
+            opacity: 80%;
+            cursor: pointer;
+        }
+
+
+    </style>
+
+    <body>
+        <header>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a target="_blank" href="https://forms.gle/rSyf4UF3XtEhviZZ7"><button>Executive Applications</button></a></li>
+                </ul>
+        
+                <ul>
+                    <li><a href="index.html"><img src="images/word logo.png" width="275px"></a></li>
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="about.html">About</a></li>
+                    <li class="hideOnMobile"><a href="resources.html">Resources</a></li>
+                    <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                    <li class="hideOnMobile"><a target="_blank" href="https://forms.gle/rSyf4UF3XtEhviZZ7"><button>Executive Applications</button></a></li>
+                    <li class="menuButton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+            </nav>
+        </header>
+    <main>
+        <section class="contact">
+            <br>
+            <br>
+            <h2>Contact Us</h2>
+            <p>If you have any questions or want to get involved, please reach out to us:</p>
+            <ul>
+                <li>Email: codecatalystorg@gmail.com</li>
+                <li>Instagram: @codecatalystorg</li>
+                <li>Questions? Fill out the form below:</li>
+            </ul>
+        </section>
+
+        <section class="questions">
+            <form action="https://formspree.io/f/mnnagbrb" method="POST">
+                <h2>Questions?</h2>
+                <input type="text" name="first" placeholder="First Name" autocomplete="off" required>
+                <input type="text" name="last" placeholder="Last Name" autocomplete="off" required>
+                <input type="email" name="email" placeholder="Email Adress" autocomplete="off" required>
+                <textarea rows="5" cols="60" name="message" placeholder="Enter Text" autocomplete="off" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <br>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CodeCatalyst. All rights reserved.</p>
+    </footer>
+</body>
+</html>
