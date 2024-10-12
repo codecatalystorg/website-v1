@@ -16,38 +16,67 @@
         display: flex;
         flex-direction: column;
         align-items:center;
-        min-height: 400px;
-        padding: 70px 20vw;
+        padding: 70px 10vw;
     }
 
     .hero{
-        background-image: url('images/coding.png');
+        margin-top:60px;
+      
+/*         filter:blur(2px);
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: 100% 100%;
+        background-size: 100% 100%; */
         color: antiquewhite;
     }
 
+    .background-image{
+        top:60px;
+        filter: blur(15px) ;
+        position:fixed;
+        object-fit: cover;
+        object-position: 50% 100%;
+        z-index:-1;
+        height:100vh;
+        width:100vw;
+    }
+
     .hero h2 {
-        margin: 20px;
-        font-size: xx-large;
+        margin: 30px 0px 20px 0px;
+        font-size: xxx-large;
     }
 
     .hero p{
         color: antiquewhite;
-        font-size: x-large;
+        font-size: large;
+        font-weight:300;
+    }
+
+    .slogan{
+
+        align-self: flex-start;
+    }
+
+    .slogan::first-line{
+        color:antiquewhite;
+        background-color: transparent;
     }
 
     .divhero{
-        background-color: rgba(0, 0, 0, 0.6);
-
+        text-align: left;
+        color:#333;
     }
+
+    .slogan-text{
+        color: rgb(159, 239, 159);
+    }
+
     .mission{
         background-color: antiquewhite;
     }
 
     .mission p{
-        font-size: x-large;
+        font-size: large;
+        margin:15px 0px;
     }
 
     .mission h2{
@@ -59,7 +88,16 @@
     }
 
     .vision p{
-        font-size: x-large;
+        font-size: large;
+        margin:15px 0px;
+    }
+
+    .vision{
+        background-color: white;
+    }
+
+    .align-left{
+        align-self: flex-start;
     }
 
 </style>
@@ -73,7 +111,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a target="_blank" href="https://forms.gle/rSyf4UF3XtEhviZZ7"><button>Executive Applications</button></a></li>
+                <li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSekIbtN3SzXfiG4lydE3fJchn0IsZNaCILP3rLYt1MGrspeXg/viewform?usp=send_form"><button>Sign Up</button></a></li>
             </ul>
     
             <ul>
@@ -82,16 +120,16 @@
                 <li class="hideOnMobile"><a href="about.html">About</a></li>
                 <li class="hideOnMobile"><a href="resources.html">Resources</a></li>
                 <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
-                <li class="hideOnMobile"><a target="_blank" href="https://forms.gle/rSyf4UF3XtEhviZZ7"><button>Executive Applications</button></a></li>
+                <li class="hideOnMobile"><a class='signup-button' target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSekIbtN3SzXfiG4lydE3fJchn0IsZNaCILP3rLYt1MGrspeXg/viewform?usp=send_form"><button>Sign Up</button></a></li> 
                 <li class="menuButton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="hero">
-            <div class="divhero"><h2>"Fueling Knowledge and Innovation, One Line at a Time" — CodeCatalyst Team</h2></div>
-            <br>
-            <br>
+            <img class="background-image" src="images/coding.png">
+            <div class="divhero slogan"><h2 class="slogan-text">Fueling Knowledge and Innovation,<br>One Line at a Time</h2></div>
+
             <div class="divhero">
                 <p>At CodeCatalyst, we provide high school students in North America with the skills and knowledge in coding, web
                     development, and engineering to empower them to create innovative solutions for real-world problems. Through
@@ -100,22 +138,16 @@
                     designed to be inclusive and accessible, ensuring that all students, regardless of their background, have the
                     opportunity to explore and excel in the fields of technology and engineering.</p>
             </div>
-            <br>
-            <br>
+         
             <a href="about.html" class="btn btn4">Learn More</a>
         </section>
         <section class="mission">
-            <br>
-            <h2>Our Mission</h2>
-            <br>
-            <br>
+            <h2 class="align-left">Our Mission</h2>
             <p>At CodeCatalyst, our mission is to ignite the technological potential and interest of high school students by
                 providing comprehensive knowledge, application experience, and support in coding, web development, and engineering.</p>
         </section>
         <section class="vision">
-            <h2>Our Vision</h2>
-            <br>
-            <br>
+            <h2 class="align-left">Our Vision</h2>
             <p>CodeCatalyst envisions a world where every high school student has the capability of utilizing their technological
                 interests and knowledge to create impactful solutions. We aspire to be a leading body in fostering a diverse
                 community of like-minded individuals and contribute to solving world problems through coding, web development, and
